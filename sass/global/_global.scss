@@ -24,12 +24,12 @@ body {
 }
 .grid {
   display: grid;
-  gap: 9.6rem;
 }
 
 .grid--1-cols {
   grid-template-columns: repeat(1, 1fr);
 }
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -41,3 +41,5 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+
+

@@ -1,3 +1,20 @@
 $color-grey: #ababab;
 $color-grey-2: #696969;
 $color-brown: #be210b;
+$color-grey-dark: #333333;
+$color-black: #000;
+$color-red: #ff0000;
+
+/////////////// breakpoints /////////////////
+
+// Extra small	xs	small to large handset	< 600px
+// Small	sm	small to medium tablet	600px > < 960px
+// Medium	md	large tablet to laptop	960px > < 1264px*
+// Large	lg	desktop	1264px* > < 1904px*
+// Extra large	xl	4k and ultra-wides	> 1904px*
+
+$xs: 600px;
+$sm: 960px;
+$md: 1264px;
+$lg: 1904px;
+// $xl: 600px;
