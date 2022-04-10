@@ -311,10 +311,41 @@
 
 .footer {
   padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__container {
     width: 100%;
     padding-left: 2rem;
+    padding-bottom: 1rem;
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      display: flex;
+    }
+  }
+
+  &__flex-1 {
+    padding: 0 2rem;
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      width: 40%;
+    }
+  }
+
+  .product-container {
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      width: 20%;
+    }
+  }
+
+  .support-container {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+    @media only screen and (min-width: 380px) and (max-width: 770px) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
   }
 
   .title {
@@ -328,6 +359,7 @@
 
   &__container--logo {
     margin-bottom: 3rem;
+
     img {
       width: 230px;
       height: 40px;
@@ -336,6 +368,11 @@
 
   &__list {
     list-style: none;
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__list--items {
@@ -358,10 +395,24 @@
     display: grid;
     width: 100%;
     margin: 0 auto;
-    // column-gap: 2rem;
+    margin-bottom: 3rem;
     text-align: left;
-    grid-template-rows: 15% 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 12% 1fr 12% 12%;
+    grid-template-columns: 1fr 1fr;
+
+    @media only screen and (min-width: 320px) and (max-width: 380px) {
+      grid-template-rows: 15% 1fr 20%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: 380px) and (max-width: 770px) {
+      grid-template-rows: 15% 1fr;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      display: contents;
+    }
 
     h6 {
       padding: 0 2rem;
@@ -383,20 +434,77 @@
     }
 
     .col-3 {
+      h6 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
       padding: 0 2rem;
-      grid-column: 3/4;
-      grid-row: 2/3;
+      grid-column: 1/2;
+      grid-row: 4/5;
     }
   }
 
   .copyright {
-    width: 90%;
+    width: 80%;
     text-align: center;
     font-size: 1.5rem;
     color: $color-grey-2;
     margin: 0 auto 2rem auto;
+
+    @media only screen and (min-width: 320px) and (max-width: 770px) {
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      width: 60%;
+      text-align: left;
+      padding: 0 1rem;
+      margin: 8px;
+    }
+
     &__link {
       color: $color-red;
+    }
+  }
+
+  &__icons {
+    text-align: center;
+
+    @media only screen and (min-width: 380px) and (max-width: 770px) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      width: 40%;
+      text-align: right;
+    }
+
+    i {
+      font-size: 1.8rem;
+      padding: 1.5rem 1.8rem;
+      color: $color-grey-2;
+      border: 1px solid $color-grey-light;
+      border-radius: 50%;
+      transition: all 0.7s ease-in;
+      margin: 8px;
+
+      &:hover {
+        color: white;
+        background-color: $color-blue;
+        transition: all 0.7s ease-in;
+      }
+    }
+  }
+
+  &__bottom-wrapper {
+    display: block;
+    padding: 0 2rem;
+
+    @media only screen and (min-width: 770px) and (max-width: 1440px) {
+      display: flex;
     }
   }
 }
