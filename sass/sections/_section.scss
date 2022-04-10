@@ -310,12 +310,11 @@
 ///////////////////////////////
 
 .footer {
-  padding: 2rem;
+  padding: 4rem 0;
 
   &__container {
     width: 100%;
-    height: 1000px;
-    margin: 0 auto;
+    padding-left: 2rem;
   }
 
   .title {
@@ -357,35 +356,45 @@
 
   &__link {
     display: grid;
-    grid-template-rows: 15% 100%;
+    width: 100%;
+    margin: 0 auto;
+    // column-gap: 2rem;
+    text-align: left;
+    grid-template-rows: 15% 1fr;
     grid-template-columns: repeat(3, 1fr);
 
     h6 {
+      padding: 0 2rem;
       font-size: 1.8rem;
       color: $color-grey-dark;
       margin-bottom: 2rem;
     }
 
     .col-1 {
+      padding: 0 2rem;
       grid-column: 1/2;
       grid-row: 2/3;
     }
 
     .col-2 {
+      padding: 0 2rem;
       grid-column: 2/3;
       grid-row: 2/3;
     }
 
     .col-3 {
+      padding: 0 2rem;
       grid-column: 3/4;
       grid-row: 2/3;
     }
   }
 
   .copyright {
+    width: 90%;
+    text-align: center;
     font-size: 1.5rem;
     color: $color-grey-2;
-    margin-top: 2rem;
+    margin: 0 auto 2rem auto;
     &__link {
       color: $color-red;
     }
