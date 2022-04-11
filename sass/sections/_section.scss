@@ -319,52 +319,52 @@
     padding-left: 2rem;
     padding-bottom: 1rem;
 
+    &-flex {
+      padding: 0 1.5rem;
+    }
+
     @media only screen and (min-width: 770px) and (max-width: 4000px) {
+      margin: 0 auto;
+      width: 95%;
       display: flex;
-      // padding-bottom: 5rem;
+      justify-content: space-between;
+    }
+
+    &-1,
+    &-2,
+    &-3 {
+      @media only screen and (min-width: 770px) and (max-width: 1440px) {
+        width: 20%;
+      }
+    }
+
+    &-3 {
+      grid-column: 1/2;
+      grid-row: 3/4;
+
+      @media only screen and (min-width: 380px) and (max-width: 770px) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+    }
+
+    &--logo {
+      margin-bottom: 3rem;
+
+      img {
+        width: 230px;
+        height: 40px;
+      }
     }
   }
 
-  &__flex-1 {
-    padding: 0 2rem;
-
-    @media only screen and (min-width: 770px) and (max-width: 1440px) {
-      width: 40%;
-    }
-  }
-
-  .product-container {
-    @media only screen and (min-width: 770px) and (max-width: 1440px) {
-      width: 20%;
-    }
-  }
-
-  .support-container {
-    grid-column: 1/2;
-    grid-row: 3/4;
-
-    @media only screen and (min-width: 380px) and (max-width: 770px) {
-      grid-column: 3/4;
-      grid-row: 1/2;
-    }
-  }
-
-  .title {
+  &__title {
     margin-bottom: 2rem;
     font-family: "CerebriSans";
     font-weight: 700;
     font-size: 1.8rem;
     color: $color-brown;
     line-height: 1.3;
-  }
-
-  &__container--logo {
-    margin-bottom: 3rem;
-
-    img {
-      width: 230px;
-      height: 40px;
-    }
   }
 
   &__list {
@@ -374,22 +374,44 @@
       display: flex;
       flex-direction: column;
     }
-  }
 
-  &__list--items {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: $color-grey-2;
-    font-weight: 400;
-  }
-
-  .text-black {
-    color: $color-grey-dark;
+    &--items {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: $color-grey-2;
+      font-weight: 400;
+    }
   }
 
   a {
     text-decoration: none;
     color: $color-grey-2;
+  }
+
+  .hover-on-link {
+    position: relative;
+
+    &:hover {
+      color: $color-brown-light;
+      transition: color 0.5s ease;
+    }
+
+    &::after {
+      transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-brown-light;
+    }
+
+    &:hover:after {
+      left: 0;
+      width: 100%;
+      right: auto;
+    }
   }
 
   &__link {
@@ -474,6 +496,10 @@
     display: inline-flex;
     text-align: center;
     column-gap: 1.5rem;
+
+    @media only screen and (min-width: 320px) and (max-width: 770px) {
+      column-gap: 0;
+    }
 
     .icon {
       display: flex;
