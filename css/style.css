@@ -31,16 +31,3 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr); }
-
-.partner {
-  height: 120px; }
-  .partner__logo--container {
-    display: flex;
-    align-items: center;
-    width: 250%;
-    padding: 0 1.5rem;
-    margin-right: 3rem;
-    column-gap: 3rem; }
-    .partner__logo--container img {
-      height: 80%;
-      padding: 0 1.5rem; }
