@@ -31,3 +31,18 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr); }
+
+.about__container {
+  padding: 12rem 1.5rem 5rem 1.5rem; }
+  .about__container h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ababab;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    text-align: center; }
+  .about__container h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    line-height: 5rem; }
