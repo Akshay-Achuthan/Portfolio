@@ -31,3 +31,39 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr); }
+
+.cms__hero {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .cms__hero-container {
+    padding-top: 6rem;
+    margin-bottom: 3rem; }
+    @media only screen and (min-width: 500px) and (max-width: 750px) {
+      .cms__hero-container {
+        max-width: 510px;
+        margin: 0 auto; } }
+    @media only screen and (min-width: 750px) and (max-width: 1000px) {
+      .cms__hero-container {
+        max-width: 690px;
+        margin: 0 auto; } }
+    .cms__hero-container-image {
+      padding: 0 3rem; }
+      .cms__hero-container-image img {
+        width: 100%;
+        height: auto; }
+  .cms__hero-heading-container {
+    padding: 0 1.5rem; }
+  .cms__hero-heading h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem; }
+  .cms__hero-heading h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 2rem; }
+    @media only screen and (min-width: 750px) and (max-width: 4000px) {
+      .cms__hero-heading h3 {
+        font-size: 2.8rem; } }
