@@ -8,7 +8,7 @@
 
   &-container {
     padding-top: 6rem;
-    margin-bottom: 3rem;
+    margin: 0 2rem 3rem 2rem;
 
     @media only screen and (min-width: 500px) and (max-width: 750px) {
       max-width: 510px;
@@ -20,22 +20,49 @@
       margin: 0 auto;
     }
 
-    // @media only screen and (min-width: 1000px) and (max-width: 4000px) {
-    //   max-width: 690px;
-    //   margin: 0 auto;
-    // }
-
     &-image {
       padding: 0 3rem;
       img {
         width: 100%;
         height: auto;
       }
+
+      @media only screen and (min-width: 1000px) and (max-width: 3000px) {
+        display: flex;
+        width: 100%;
+        order: 2;
+        padding: 0 1.5rem;
+      }
     }
   }
 
-  &-heading-container {
+  &-heading-container-1 {
     padding: 0 1.5rem;
+
+    h4 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .text {
+      font-size: 1.8rem;
+      color: $color-grey-2;
+    }
+
+    @media only screen and (min-width: 1000px) and (max-width: 3000px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .flex-container {
+    display: flex;
   }
 
   &-heading {
