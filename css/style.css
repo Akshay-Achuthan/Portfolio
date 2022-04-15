@@ -1085,7 +1085,12 @@ body {
         flex-direction: column;
         width: 100%; } }
   .cms__hero .flex-container {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (min-width: 1000px) and (max-width: 3000px) {
+      .cms__hero .flex-container {
+        display: flex;
+        flex-direction: row; } }
   .cms__hero-heading h6 {
     text-align: center;
     text-transform: uppercase;
