@@ -304,6 +304,7 @@ body {
         width: 70%; } }
 
 .timeline-area {
+  text-align: left;
   padding: 3.2rem 1.5rem; }
   .timeline-area__container {
     margin-left: 1.5rem;
